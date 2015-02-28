@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jump to Objective-C counterpart file in Github",
+  "version": "1.0",
+  "description": "Control+Command+Up shortcut to navigate between header and implementation in Objective-C files in Github.",
+
+  "background": {
+    "scripts": ["events.js"],
+    "persistent": false
+  },
+
+  "commands": {
+      "jump-to-counter-part": {
+          "suggested_key": {
+            "mac": "MacCtrl+Command+Up"
+          },
+
+          "description": "Jump to counterpart"
+        }
+  },
+
+  "permissions": [
+    "activeTab"
+  ]
+}
