@@ -1,13 +1,12 @@
 function jumpToCounterPathFile() {
   chrome.tabs.query({ currentWindow: true, active: true }, function (tab) {
-    tab = tab[0];
-
     if (tab === undefined) {
       console.log("Couldn't get the current tab");
       return;
     }
 
-    var tabURL = tab.url;
+    var currentTab = tab[0];
+    var tabURL = currentTab.url;
 
     var URLIsInGithubDomain = (tabURL.indexOf("https://github.com/") === 0);
     if (!URLIsInGithubDomain) {
